@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    HttpRequestBase req = ViewBag.Request;
+}
+
+<h2>Default</h2>
+<h3>@req.HttpMethod : @req.Url</h3>
+
+

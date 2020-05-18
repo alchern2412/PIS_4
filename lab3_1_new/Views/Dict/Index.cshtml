@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <h3>Dictionary</h3>
+    <div class="row">
+        <table class="table table-bordered">
+            <tr>
+                <td><p>Id</p></td>
+                <td><p>Name</p></td>
+                <td><p>Number</p></td>
+                <td><p>UPDATE</p></td>
+                <td><p>DELETE</p></td>
+
+            </tr>
+            @foreach (var d in ViewBag.Dictionary)
+            {
+                <tr>
+                    <td><p>@d.Id</p></td>
+                    <td><p>@d.Name</p></td>
+                    <td><p>@d.Number</p></td>
+                    <td>
+                        <a href="/Dict/Update?id=@d.Id&name=@d.Name&number=@d.Number">
+                            <p>Update @d.Id</p>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="/Dict/Delete?id=@d.Id">
+                            <p>Delete @d.Id</p>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div> @*.row*@
+
+    <div class="row">
+        <a href="/Dict/Add" class="btn btn-success">Add</a>
+    </div>
+
+</div>
+
+

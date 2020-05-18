@@ -1,0 +1,18 @@
+﻿@using System.Collections.Specialized
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    HttpRequestBase req = ViewBag.Request;
+}
+
+<h2>Delete</h2>
+
+<form action="/Dict/DeleteSave" method="post">
+    <input type="text" name="record_id" value="@req.QueryString.Get("id")" />
+    @*<input class="disabled" type="text" name="record_id" value="1" />*@
+    <input class="btn btn-danger" type="submit" value="Delete" />
+</form>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

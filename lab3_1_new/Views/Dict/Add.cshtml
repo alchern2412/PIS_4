@@ -1,0 +1,17 @@
+﻿@model lab3_1_new.Models.Record
+
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+
+<form action="/Dict/AddSave" method="post">
+    <input type="text" name="name" placeholder="Name" />
+    <input type="text" name="number" placeholder="Number" />
+    <input type="submit" value="Add" />
+</form>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

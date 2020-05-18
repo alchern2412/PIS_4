@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Update";
+    HttpRequestBase req = ViewBag.Request;
+
+}
+
+<h2>Update</h2>
+
+<form action="/Dict/UpdateSave" method="post">
+    <input type="number" name="id" value="@req.QueryString.Get("id")" placeholder="id" />
+    <input type="text" name="name" value="@req.QueryString.Get("name")" placeholder="Name" />
+    <input type="text" name="number" value="@req.QueryString.Get("number")" placeholder="Number" />
+
+    <input type="submit" value="Update" />
+</form>
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
